@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEE, DA-WEI | Personal Dashboard</title>
+  <meta name="description" content="Personal profile and live dynamic dashboard for LEE, DA-WEI">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <div class="wrapper">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="avatar-ring">
+          <span class="avatar-text">DL</span>
+        </div>
+        <div class="brand-text">
+          <span class="user-status-dot"></span>
+          <span class="brand-sub">ONLINE</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="format-toggle" class="glass-btn" title="Toggle 12h/24h format">
+          <span id="format-label">24H</span>
+        </button>
+        <button id="theme-toggle" class="glass-btn icon-btn" title="Toggle Theme" aria-label="Toggle theme">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Sun icon default -->
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-grid">
+      <!-- Profile Hero Card -->
+      <section class="glass-card hero-card" id="profile-card">
+        <div class="card-badge">PROFILE</div>
+        <div class="hero-content">
+          <div class="greeting-tag" id="greeting-tag">
+            <span class="greeting-icon" id="greeting-icon">✨</span>
+            <span id="greeting-text">Hello & Welcome</span>
+          </div>
+          <h1 class="hero-name">LEE, DA-WEI</h1>
+          <p class="hero-handle">@Dave1588</p>
+          <p class="hero-bio">
+            Software Developer & Creative Engineer. Exploring modern web technologies, building performant applications, and crafting delightful experiences.
+          </p>
+        </div>
+
+        <div class="hero-footer">
+          <a href="https://github.com/Dave1588" target="_blank" rel="noopener noreferrer" class="cta-link github-btn" id="github-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub Profile</span>
+          </a>
+          <a href="mailto:davelee1588@gmail.com" class="cta-link email-btn" id="email-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Live Clock Card -->
+      <section class="glass-card clock-card" id="clock-card">
+        <div class="card-badge">LIVE CLOCK</div>
+        
+        <!-- Animated Ring Progress -->
+        <div class="clock-display-container">
+          <div class="time-main">
+            <div class="digits-box">
+              <span class="time-digit" id="hours">00</span>
+              <span class="time-separator">:</span>
+              <span class="time-digit" id="minutes">00</span>
+              <span class="time-separator">:</span>
+              <span class="time-digit highlight" id="seconds">00</span>
+            </div>
+            <span class="time-period" id="period">PM</span>
+          </div>
+
+          <!-- Date & Timezone Info -->
+          <div class="date-container">
+            <div class="date-badge">
+              <span class="calendar-icon">📅</span>
+              <span id="full-date">Monday, September 14, 2026</span>
+            </div>
+            <div class="timezone-badge">
+              <span class="globe-icon">🌐</span>
+              <span id="user-timezone">Asia/Taipei (GMT+8)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seconds Visualizer Bar -->
+        <div class="second-progress-wrapper">
+          <div class="second-progress-bar" id="second-progress"></div>
+        </div>
+      </section>
+
+      <!-- Live Statistics / Info Card -->
+      <section class="glass-card stats-card" id="stats-card">
+        <div class="card-badge">STATUS & METRICS</div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-icon">⚡</span>
+            <div class="stat-info">
+              <span class="stat-label">System Time</span>
+              <span class="stat-val" id="iso-time">Loading...</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">⏳</span>
+            <div class="stat-info">
+              <span class="stat-label">Session Uptime</span>
+              <span class="stat-val" id="session-uptime">00:00:00</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🗓️</span>
+            <div class="stat-info">
+              <span class="stat-label">Day of Year</span>
+              <span class="stat-val" id="day-of-year">Day 257 / 365</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">📍</span>
+            <div class="stat-info">
+              <span class="stat-label">Workspace</span>
+              <span class="stat-val">Dave1588 / L02</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© <span id="current-year">2026</span> LEE, DA-WEI • Crafted with precision & style</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
